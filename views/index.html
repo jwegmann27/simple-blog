@@ -1,5 +1,5 @@
 {{> header }}
-  <main class="container">
+  <main class="container-fluid">
     {{# cosmic.objects.type.posts }}
       <div class="col-xs-12 col-sm-12 col-md-8 center-xs card" data-href="/{{ slug }}">
         {{# metadata.hero.imgix_url }}
@@ -18,7 +18,7 @@
           </div>
           <div class="blog__teaser droid">{{{ metadata.teaser }}}</div>
           <div class="blog__read-more">
-            <a href="/{{ slug }}">Read more...</a>
+            <a class="flat-btn" href="/{{ slug }}">Read more</a>
           </div>
         </div>
       </div>

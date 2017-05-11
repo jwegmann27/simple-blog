@@ -48,6 +48,9 @@ html, body {
 h1, h2, h3, h4, h5, h6 {
   color: #4c0b2f;
 }
+h1, h2, h3, h4, h5, h6, a, p, span, .blog__author-title {
+  font-family: 'Roboto', sans-serif !important;
+}
 a {
   text-decoration: none;
   color: #4c0b2f;
@@ -57,7 +60,21 @@ a:hover {
   color: #832156;
 }
 p {
-  color: #252525
+  color: #252525;
+}
+p span {
+  font-size: 1em !important;
+  color: #252525 !important;
+  background-color: #FEE8DA !important;
+}
+.flat-btn {
+  display: inline-block;
+  text-transform: uppercase;
+  padding: .2em;
+}
+.flat-btn:hover {
+  background-color: #4c0b2f;
+  color: #FFDBC5;
 }
 /* Header */
 header {
@@ -67,13 +84,18 @@ header {
 }
 
 header h1 {
-  margin: 0;
+  margin: 0 0 .25em 0;
   font-size: 4em;
 }
 
 /*Posts*/
 .card {
   margin: 2em 0;
+  background-color: #FEE8DA;
+  border-radius: 5px;
+}
+.card-padding {
+  padding: .625em;
 }
 .card-padding h2 {
   margin: 0;
