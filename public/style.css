@@ -65,7 +65,8 @@ header {
   position: relative;
   text-align: center;
   padding: 1em 0;
-  background-image: linear-gradient(#2F1A55, #347AC7);
+  background: #2F1A55;
+  background-image: linear-gradient(#2F1A55, #2F1A55, #347AC7);
 }
 header img.moon {
   position: absolute;
@@ -85,6 +86,7 @@ header h1 a, header h1 a:hover, header p {
   margin: 2em 0;
   background-color: #6CD3fc;
   border-radius: 5px;
+  box-shadow: 2px 3px 4px #2f1f5b;
 }
 .card-padding {
   padding: .625em;
@@ -94,4 +96,35 @@ header h1 a, header h1 a:hover, header p {
 }
 .card-padding .blog__author {
   margin-bottom: 1em;
+}
+
+/*Stars*/
+@keyframes rotate {
+  0% {
+    transform: perspective(400px) rotateZ(20deg) rotateX(-40deg) rotateY(0);
+  }
+  100% {
+    transform: perspective(400px) rotateZ(20deg) rotateX(-40deg) rotateY(-360deg);
+  }
+}
+.stars {
+  transform: perspective(500px);
+  transform-style: preserve-3d;
+  position: absolute;
+  bottom: 0;
+  perspective-origin: 50% 100%;
+  left: 50%;
+  animation: rotate 90s infinite linear;
+}
+
+.star {
+  width: 2px;
+  height: 2px;
+  background: #F7F7B6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: 0 0 -300px;
+  transform: translate3d(0, 0, -300px);
+  backface-visibility: hidden;
 }
