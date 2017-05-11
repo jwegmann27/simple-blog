@@ -1,0 +1,83 @@
+/*CSS Clear*/
+html, body, ul, ol, li, form, fieldset, legend
+{
+	margin: 0;
+	padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p { margin-top: 0; }
+
+fieldset,img { border: 0; }
+
+legend { color: #000; }
+
+li { list-style: none; }
+
+sup { vertical-align: text-top; }
+
+sub { vertical-align: text-bottom; }
+
+table
+{
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+caption, th, td
+{
+	text-align: left;
+	vertical-align: top;
+	font-weight: normal;
+}
+
+input, textarea, select
+{
+	font-size: 110%;
+	line-height: 1.1;
+}
+
+abbr, acronym
+{
+	border-bottom: .1em dotted;
+	cursor: help;
+}
+/*Global*/
+html, body {
+  background-color: #FFDBC5;
+}
+h1, h2, h3, h4, h5, h6 {
+  color: #4c0b2f;
+}
+a {
+  text-decoration: none;
+  color: #4c0b2f;
+  cursor: pointer;
+}
+a:hover {
+  color: #832156;
+}
+p {
+  color: #252525
+}
+/* Header */
+header {
+  text-align: center;
+  padding: 1em 0;
+  background-image: linear-gradient(#FE7847, #FFDBC5);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 4em;
+}
+
+/*Posts*/
+.card {
+  margin: 2em 0;
+}
+.card-padding h2 {
+  margin: 0;
+}
+.card-padding .blog__author {
+  margin-bottom: 1em;
+}
