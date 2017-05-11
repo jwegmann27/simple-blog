@@ -1,49 +1,35 @@
 /*CSS Clear*/
-html, body, ul, ol, li, form, fieldset, legend
-{
+html, body, ul, ol, li, form, fieldset, legend {
 	margin: 0;
 	padding: 0;
 }
-
 h1, h2, h3, h4, h5, h6, p { margin-top: 0; }
-
 fieldset,img { border: 0; }
-
 legend { color: #000; }
-
 li { list-style: none; }
-
 sup { vertical-align: text-top; }
-
 sub { vertical-align: text-bottom; }
-
-table
-{
+table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
-caption, th, td
-{
+caption, th, td {
 	text-align: left;
 	vertical-align: top;
 	font-weight: normal;
 }
-
-input, textarea, select
-{
+input, textarea, select {
 	font-size: 110%;
 	line-height: 1.1;
 }
-
-abbr, acronym
-{
+abbr, acronym {
 	border-bottom: .1em dotted;
 	cursor: help;
 }
+
 /*Global*/
 html, body {
-  background-color: #FFDBC5;
+  background-color: #347AC7;
 }
 h1, h2, h3, h4, h5, h6 {
   color: #4c0b2f;
@@ -53,11 +39,8 @@ h1, h2, h3, h4, h5, h6, a, p, span, .blog__author-title {
 }
 a {
   text-decoration: none;
-  color: #4c0b2f;
+  color: #2F1A55;
   cursor: pointer;
-}
-a:hover {
-  color: #832156;
 }
 p {
   color: #252525;
@@ -65,7 +48,7 @@ p {
 p span {
   font-size: 1em !important;
   color: #252525 !important;
-  background-color: #FEE8DA !important;
+  background-color: #6CD3fc !important;
 }
 .flat-btn {
   display: inline-block;
@@ -73,25 +56,34 @@ p span {
   padding: .2em;
 }
 .flat-btn:hover {
-  background-color: #4c0b2f;
-  color: #FFDBC5;
-}
-/* Header */
-header {
-  text-align: center;
-  padding: 1em 0;
-  background-image: linear-gradient(#FE7847, #FFDBC5);
+  background-color: #347AC7;
+  color: #6CD3fc;
 }
 
+/* Header */
+header {
+  position: relative;
+  text-align: center;
+  padding: 1em 0;
+  background-image: linear-gradient(#2F1A55, #347AC7);
+}
+header img.moon {
+  position: absolute;
+  top: -215px;
+  left: -150px;
+}
 header h1 {
-  margin: 0 0 .25em 0;
+  margin: 4em 0 .25em 0;
   font-size: 4em;
+}
+header h1 a, header h1 a:hover, header p {
+  color: #D3F1F4;
 }
 
 /*Posts*/
 .card {
   margin: 2em 0;
-  background-color: #FEE8DA;
+  background-color: #6CD3fc;
   border-radius: 5px;
 }
 .card-padding {
