@@ -1,27 +1,60 @@
 {{> header }}
-  <main class="container-fluid">
-    {{# cosmic.objects.type.posts }}
-      <div class="col-xs-12 col-sm-12 col-md-8 center-xs card" data-href="/{{ slug }}">
-        {{# metadata.hero.imgix_url }}
-          <div class="blog-post-hero blog-post-hero--short" style="background-image: url({{ metadata.hero.imgix_url }})"></div>
-        {{/ metadata.hero.imgix_url }}
-        <div class="start-xs card-padding">
-          <h2 class="blog__title blog__title--small">
-            <a href="/{{ slug }}">{{ title }}</a>
-          </h2>
-          <div class="blog__author">
-            <a href="/author/{{ metadata.author.slug }}">
-              <div class="blog__author-image" style="background-image: url({{ metadata.author.metadata.image.imgix_url }}?w=100)"></div>
-            </a>
-            <div class="blog__author-title">by <a href="/author/{{ metadata.author.slug }}">{{ metadata.author.title }}</a> on {{ friendly_date }}</div>
-            <div class="clearfix"></div>
-          </div>
-          <div class="blog__teaser droid">{{{ metadata.teaser }}}</div>
-          <div class="blog__read-more">
-            <a class="flat-btn" href="/{{ slug }}">Read more</a>
+  <main class="container-fluid row">
+    <div class="col-xs-12 col-sm-12 col-md-8">
+      {{# cosmic.objects.type.posts }}
+        <div class="col-xs-12 col-sm-12 col-md-12 center-xs card" data-href="/{{ slug }}">
+          {{# metadata.hero.imgix_url }}
+            <div class="blog-post-hero blog-post-hero--short" style="background-image: url({{ metadata.hero.imgix_url }})"></div>
+          {{/ metadata.hero.imgix_url }}
+          <div class="start-xs card-padding">
+            <h2 class="blog__title blog__title--small">
+              <a href="/{{ slug }}">{{ title }}</a>
+            </h2>
+            <div class="blog__author">
+              <a href="/author/{{ metadata.author.slug }}">
+                <div class="blog__author-image" style="background-image: url({{ metadata.author.metadata.image.imgix_url }}?w=100)"></div>
+              </a>
+              <div class="blog__author-title">by <a href="/author/{{ metadata.author.slug }}">{{ metadata.author.title }}</a> on {{ friendly_date }}</div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="blog__teaser droid">{{{ metadata.teaser }}}</div>
+            <div class="blog__read-more">
+              <a class="flat-btn" href="/{{ slug }}">Read more</a>
+            </div>
           </div>
         </div>
+      {{/ cosmic.objects.type.posts }}
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-4">
+      <div class="card recommendation-card">
+      <h3>Media Recommendations</h3>
+      <h4>Podcasts</h4>
+        <ul>
+          <li><a target="_blank" href="https://store.counterpunch.org/category/counterpunch-radio-podcasts/">Counter Punch</a></li>
+          <li><a target="_blank" href="https://stownpodcast.org/">S-town</a></li>
+          <li><a target="_blank" href="https://itunes.apple.com/us/podcast/jacobin-radio/id791564318?mt=2">Jacobin</a></li>
+          <li><a target="_blank" href="https://theintercept.com/podcasts/">Intercepted</a></li>
+          <li><a target="_blank" href="https://www.democracynow.org/">Democracy Now!</a></li>
+        </ul>
+      <h4>Books</h4>
+        <ul>
+          <li><a target="_blank" href="http://www.patrickrothfuss.com/content/books.asp">The Name of The Wind - Patrick Rothfuss</a></li>
+          <li><a target="_blank" href="https://en.wikipedia.org/wiki/A_People%27s_History_of_the_United_States">A People's History of the United States - Howard Zinn</a></li>
+          <li><a target="_blank" href="https://books.google.com/books/about/Requiem_for_the_American_Dream.html?id=i8TqDAAAQBAJ&printsec=frontcover&source=kp_read_button#v=onepage&q&f=false">Requiem for the American Dream - Noam Chomsky</a></li>
+          <li><a target="_blank" href="http://www.goodreads.com/book/show/27833670-dark-matter">Dark Matter - Black Crouch</a></li>
+        </ul>
+      <h4>Websites</h4>
+        <ul>
+          <li><a target="_blank" href="https://www.socialistalternative.org/">Socialist Alternative</a></li>
+          <li><a target="_blank" href="https://www.jacobinmag.com/">Jacobin Mag</a></li>
+          <li><a target="_blank" href="https://theintercept.com/">The Intercept</a></li>
+        </ul>
+        <!--ul>
+          {{# cosmic.objects.type.recommendations }}
+            <li><a href="/recommendation/{{slug}}">{{title}}</a></li>
+          {{/ cosmic.objects.type.recommendations }}
+        </ul-->
       </div>
-    {{/ cosmic.objects.type.posts }}
+    </div>
   </main>
 {{> footer }}

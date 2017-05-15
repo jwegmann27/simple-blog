@@ -34,6 +34,7 @@ app.get('/', (req, res) => {
     res.render('index.html', { partials })
   })
 })
+
 // Single Post
 app.get('/:slug', (req, res) => {
   Cosmic.getObjects({ bucket: { slug: bucket_slug, read_key: read_key } }, (err, response) => {
@@ -55,6 +56,29 @@ app.get('/:slug', (req, res) => {
     res.render('post.html', { partials })
   })
 })
+
+//Single Recommendation
+app.get('/recommendation/:slug', (req, res) => {
+  Cosmic.getObjects({ bucket: { slug: bucket_slug, read_key: read_key } }, (err, response) => {
+    const cosmic = response
+    if (cosmic.objects.type.recommendations) {
+      cosmic.objects.type.recommendations.forEach(recommendation => {
+        const friendly_date = helpers.friendlyDate(new Date(recommendation.created_at))
+        recommendation.friendly_date = friendly_date.month + ' ' + friendly_date.date
+        // Get current recommendation
+        if (recommendation.slug === req.params.slug)
+          res.locals.current_recommendation = recommendation
+      })
+    } else {
+      cosmic.no_recommendations = true
+    }
+    res.locals.cosmic = cosmic
+    if (!res.locals.current_recommendation)
+      res.status(404)
+    res.render('recommendation.html', { partials })
+  })
+})
+
 // Author Posts
 app.get('/author/:slug', (req, res) => {
   Cosmic.getObjects({ bucket: { slug: bucket_slug, read_key: read_key } }, (err, response) => {

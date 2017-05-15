@@ -1,7 +1,7 @@
 {{> header }}
   <main class="main single-post">
     {{^ current_post }}
-      <div class="container">
+      <div class="col-xs-12r">
         <h1>Page not found</h1>
       </div>
     {{/ current_post }}
@@ -9,7 +9,7 @@
       {{# metadata.hero.imgix_url }}
         <div class="blog-post-hero" style="background-image: url({{ metadata.hero.imgix_url }})"></div>
       {{/ metadata.hero.imgix_url }}
-      <div class="container">
+      <div class="col-xs-12">
         <h2 class="blog__title">
           <a href="/{{ slug }}">{{ title }}</a>
         </h2>

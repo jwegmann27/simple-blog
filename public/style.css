@@ -42,6 +42,10 @@ a {
   color: #2F1A55;
   cursor: pointer;
 }
+a:hover {
+	color: #522fa5;
+	text-decoration: underline;
+}
 p {
   color: #252525;
 }
@@ -58,10 +62,12 @@ p span {
 .flat-btn:hover {
   background-color: #347AC7;
 	color:  #f2f2f2;
+	text-decoration: none;
 }
 
 /* Header */
 header {
+	overflow: hidden;
   position: relative;
   text-align: center;
   padding: 1em 0;
@@ -96,6 +102,17 @@ header h1 a, header h1 a:hover, header p {
 }
 .card-padding .blog__author {
   margin-bottom: 1em;
+}
+/*Recommendation*/
+.recommendation-card {
+	padding: 1em;
+}
+.recommendation-card ul {
+	padding-left: .625em;
+	padding-bottom: 1em;
+}
+.recommendation-card ul li {
+	padding-bottom: .625em;
 }
 /*Single Post Page*/
 .single-post {

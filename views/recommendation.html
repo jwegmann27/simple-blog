@@ -1,0 +1,21 @@
+{{> header }}
+  <main class="main single-post">
+    {{^ current_recommendation}}
+      <div class="col-xs-12">
+        <h1>Page not founmd</h1>
+      </div>
+    {{/ current_recommendation}}
+    {{# current_recommendation}}
+      <div class="col-xs-12">
+        <h2 class="blog__title">
+          <a href="/{{ slug }}">{{ title }}</a>
+        </h2>
+        <div class="blog__author">
+          <div class="blog__author-title">by <a href="/author/{{ metadata.author.slug }}">{{ metadata.author.title }}</a> on {{ friendly_date }}</div>
+          <div class="clearfix"></div>
+        </div>
+        <div class="blog__content droid">{{{ content }}}</div>
+      </div>
+    {{/ current_recommendation }}
+  </main>
+{{> footer }}
