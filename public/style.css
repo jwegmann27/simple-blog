@@ -48,7 +48,7 @@ p {
 p span {
   font-size: 1em !important;
   color: #252525 !important;
-  background-color: #6CD3fc !important;
+  background-color:  #f2f2f2 !important;
 }
 .flat-btn {
   display: inline-block;
@@ -57,7 +57,7 @@ p span {
 }
 .flat-btn:hover {
   background-color: #347AC7;
-  color: #6CD3fc;
+	color:  #f2f2f2;
 }
 
 /* Header */
@@ -84,7 +84,7 @@ header h1 a, header h1 a:hover, header p {
 /*Posts*/
 .card {
   margin: 2em 0;
-  background-color: #6CD3fc;
+  background-color: #f2f2f2;
   border-radius: 5px;
   box-shadow: 2px 3px 4px #2f1f5b;
 }
@@ -97,7 +97,21 @@ header h1 a, header h1 a:hover, header p {
 .card-padding .blog__author {
   margin-bottom: 1em;
 }
-
+/*Single Post Page*/
+.single-post {
+	width: 85%;
+	margin: 2em auto;
+	padding: 1em;
+	background-color: #f5f5f5;
+	box-shadow: 2px 3px 4px #2f1f5b;
+	border-radius: 5px;
+}
+.single-post .blog__title {
+	margin: 0;
+}
+.single-post .blog__author {
+	margin: 1em 0;
+}
 /*Stars*/
 @keyframes rotate {
   0% {
